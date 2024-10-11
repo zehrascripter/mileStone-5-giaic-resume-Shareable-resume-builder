@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Dynamic Resume Builder</h1>
+    <form id="resume-form">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required />
+      </div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+      </div>
+      <div class="form-group">
+        <label for="education">Education:</label>
+        <textarea id="education" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="experience">Work Experience:</label>
+        <textarea id="experience" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="skills">Skills:</label>
+        <textarea id="skills" required></textarea>
+      </div>
+      <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resume-output" class="resume-output hidden">
+      <h2>Resume</h2>
+      <div id="resume"></div>
+      <button id="download-btn">Download PDF</button>
+      <button id="copy-link-btn">Copy Shareable Link</button>
+      <p id="shareable-link"></p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
